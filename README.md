@@ -1,4 +1,4 @@
-# AngularJS-RequireJS generator
+# AngularJS-RequireJS-Lazyload generator
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](https://travis-ci.org/aaronallport/generator-angular-require.png?branch=master)](https://travis-ci.org/aaronallport/generator-angular-require)
 
