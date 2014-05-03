@@ -21,7 +21,7 @@ Generator.prototype.rewriteAppJs = function () {
     needle: '.otherwise',
     splicable: [
       "  templateUrl: 'views/" + this.name.toLowerCase() + ".html',",
-      "  controller: '" + this.classedName + "Ctrl'"
+      "  resolve: resolveController(['./controllers/" + this.name.toLowerCase() + "'])"
     ]
   };
 

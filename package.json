@@ -1,7 +1,7 @@
 {
-  "name": "generator-angular-require",
-  "version": "0.1.13",
-  "description": "Yeoman generator for AngularJS using RequireJS",
+  "name": "generator-angular-lazyload",
+  "version": "0.0.1",
+  "description": "Yeoman generator for AngularJS Lazyload using RequireJS",
   "keywords": [
     "yeoman-generator",
     "scaffold",
@@ -10,15 +10,16 @@
     "front-end",
     "app",
     "angular",
-    "requirejs"
+    "requirejs",
+	"lazyload"
   ],
-  "author": "Aaron Allport",
+  "author": "Truongld",
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aaronallport/generator-angular-require.git"
+    "url": "https://github.com/aaronallport/generator-angular-lazyload.git"
   },
-  "bugs": "http://github.com/aaronallport/generator-angular-require/issues",
+  "bugs": "http://github.com/aaronallport/generator-angular-lazyload/issues",
   "scripts": {
     "test": "mocha"
   },

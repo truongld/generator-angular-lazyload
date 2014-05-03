@@ -2,15 +2,29 @@
 define(['angular']/*deps*/, function (angular)/*invoke*/ {
   'use strict';
 
-  return angular.module('<%= scriptAppName %>', [/*angJSDeps*/<%= angularModules %>])<% if (ngRoute) { %>
-    .config(function ($routeProvider) {
+  var app = angular.module('<%= scriptAppName %>', [/*angJSDeps*/<%= angularModules %>])<% if (ngRoute) { %>
+    .config(['$routeProvider', '$controllerProvider', '$provide',function ($routeProvider, $controllerProvider, $provide) {
+		function resolveController(names) {
+		    return {
+		        load: ['$q', '$rootScope', function ($q, $rootScope) {
+		            var defer = $q.defer();
+		            require(names, function () {
+		                defer.resolve();
+		                $rootScope.$apply();
+		            });
+		            return defer.promise;
+		        }]
+		    }
+		}
+		
       $routeProvider
         .when('/', {
           templateUrl: 'views/main.html',
-          controller: 'MainCtrl'
+          resolve: resolveController(['MainCtrl'])
         })
         .otherwise({
           redirectTo: '/'
         });
-    })<% } %>;
+    }])<% } %>;
+	return app;
 });
