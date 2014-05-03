@@ -1,7 +1,13 @@
 /*jshint unused: vars */
 require.config({
   paths: {
-    
+      'angular-scenario': '../bower_components/angular-scenario/angular-scenario',
+      'angular-sanitize': '../bower_components/angular-sanitize/angular-sanitize',
+      'angular-route': '../bower_components/angular-route/angular-route',
+      'angular-resource': '../bower_components/angular-resource/angular-resource',
+      'angular-mocks': '../bower_components/angular-mocks/angular-mocks',
+      'angular-cookies': '../bower_components/angular-cookies/angular-cookies',
+      'angular' : '../bower_components/angular/angular',
   },
   shim: {
     'angular' : {'exports' : 'angular'}<% if (routeModule) { %>,
