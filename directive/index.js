@@ -22,10 +22,10 @@ Generator.prototype.createDirectiveFiles = function createDirectiveFiles() {
 
 // Re-write the main app module to account for our new dependency
 Generator.prototype.injectDependenciesToApp = function () {
-  angularUtils.injectIntoFile(
+  /*angularUtils.injectIntoFile(
     this.env.options.appPath, 
     'directives/' + this.name.toLowerCase(), 
     this.classedName + 'Directive', 
     this.scriptAppName + '.directives.' + this.classedName
-  );
+  );/**/
 };

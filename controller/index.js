@@ -27,10 +27,11 @@ Generator.prototype.createControllerFiles = function createControllerFiles() {
 
 // Re-write the main app module to account for our new dependency
 Generator.prototype.injectDependenciesToApp = function () {
-  angularUtils.injectIntoFile(
+  /*angularUtils.injectIntoFile(
     this.env.options.appPath, 
     'controllers/' + this.name.toLowerCase(), 
     this.classedName + 'Ctrl', 
     this.scriptAppName + '.controllers.' + this.classedName + 'Ctrl'
   );
+  /**/
 };

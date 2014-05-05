@@ -37,13 +37,13 @@ function injectIntoFile (appPath, moduleName, attachedComponentName, injectedMod
   config.needle = "]/*deps*/";
   config.splicable = [ ", '" + moduleName + "'" ];
 
-  //rewriteFile(config);
+  rewriteFile(config);
 
   // Ensure our module is invoked
   config.needle = ")/*invoke*/";
   config.splicable = [ ", " + attachedComponentName ];
 
-  //rewriteFile(config);
+  rewriteFile(config);
 
   // Check for the existence of a controllers module as an 
   // application dependency. If it doesn't exist, inject it
@@ -55,7 +55,7 @@ function injectIntoFile (appPath, moduleName, attachedComponentName, injectedMod
     config.needle = "/*angJSDeps*/";
     config.splicable = [ "'" + injectedModuleName + "',\n" ];
 
-    //rewriteFile(config);
+    rewriteFile(config);
   }
 }
 

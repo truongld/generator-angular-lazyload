@@ -1,13 +1,13 @@
 /*jshint unused: vars */
 require.config({
   paths: {
+	  'angular' : '../bower_components/angular/angular',
+	  'angular-mocks': '../bower_components/angular-mocks/angular-mocks'<% if (routeModule) { %>,
+      'angular-route': '../bower_components/angular-route/angular-route'<% } %><% if (sanitizeModule) { %>,
       'angular-scenario': '../bower_components/angular-scenario/angular-scenario',
-      'angular-sanitize': '../bower_components/angular-sanitize/angular-sanitize',
-      'angular-route': '../bower_components/angular-route/angular-route',
-      'angular-resource': '../bower_components/angular-resource/angular-resource',
-      'angular-mocks': '../bower_components/angular-mocks/angular-mocks',
-      'angular-cookies': '../bower_components/angular-cookies/angular-cookies',
-      'angular' : '../bower_components/angular/angular',
+      'angular-sanitize': '../bower_components/angular-sanitize/angular-sanitize'<% } %><% if (resourceModule) { %>,
+      'angular-resource': '../bower_components/angular-resource/angular-resource'<% } %><% if (cookiesModule) { %>,
+      'angular-cookies': '../bower_components/angular-cookies/angular-cookies'<% } %>
   },
   shim: {
     'angular' : {'exports' : 'angular'}<% if (routeModule) { %>,
@@ -44,3 +44,17 @@ require([
     angular.resumeBootstrap([app.name]);
   });
 });
+
+/* resolve controller for lazyload */
+function resolveController(names) {
+  return {
+    load: ['$q', '$rootScope', function ($q, $rootScope) {
+        var defer = $q.defer();
+        require(names, function () {
+          defer.resolve();
+          $rootScope.$apply();
+        });
+      return defer.promise;
+    }]
+  };
+}
