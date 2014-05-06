@@ -1,15 +1,15 @@
-# AngularJS-RequireJS-Lazyload generator
+# AngularJS-Lazyload generator
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](https://travis-ci.org/aaronallport/generator-angular-lazyload.png?branch=master)](https://travis-ci.org/aaronallport/generator-angular-lazyload)
 
-> Yeoman generator for AngularJS using RequireJS - lets you quickly set up a project with sensible defaults and best practises.
+> Yeoman generator for AngularJS using RequireJS for Lazyload - lets you quickly set up a project with sensible defaults and best practises.
 
 
 ## Usage
 
-Install `generator-angular-require`:
+Install `generator-angular-lazyload`:
 ```
-npm install -g generator-angular-require
+npm install -g generator-angular-lazyload
 ```
 
 Make a new directory, and `cd` into it:
@@ -17,9 +17,9 @@ Make a new directory, and `cd` into it:
 mkdir my-new-project && cd $_
 ```
 
-Run `yo angular-require`, optionally passing an app name:
+Run `yo angular-lazyload`, optionally passing an app name:
 ```
-yo angular-require [app-name]
+yo angular-lazyload [app-name]
 ```
 
 `grunt build` must be run before anything else due to dependency population in the RequireJS config and the like (this will be fixed in a future version).
@@ -31,18 +31,18 @@ Run `grunt` for building and `grunt serve` for preview
 
 Available generators:
 
-* [angular-require](#app) (aka [angular-require:app](#app))
-* [angular-require:controller](#controller)
-* [angular-require:directive](#directive)
-* [angular-require:filter](#filter)
-* [angular-require:route](#route)
-* [angular-require:service](#service)
-* [angular-require:provider](#service)
-* [angular-require:factory](#service)
-* [angular-require:value](#service)
-* [angular-require:constant](#service)
-* [angular-require:decorator](#decorator)
-* [angular-require:view](#view)
+* [angular-lazyload](#app) (aka [angular-lazyload:app](#app))
+* [angular-lazyload:controller](#controller)
+* [angular-lazyload:directive](#directive)
+* [angular-lazyload:filter](#filter)
+* [angular-lazyload:route](#route)
+* [angular-lazyload:service](#service)
+* [angular-lazyload:provider](#service)
+* [angular-lazyload:factory](#service)
+* [angular-lazyload:value](#service)
+* [angular-lazyload:constant](#service)
+* [angular-lazyload:decorator](#decorator)
+* [angular-lazyload:view](#view)
 
 **Note: Generators are to be run from the root directory of your app.**
 
@@ -51,7 +51,7 @@ Sets up a new AngularJS-RequireJS app, generating all the boilerplate you need t
 
 Example:
 ```bash
-yo angular-require
+yo angular-lazyload
 ```
 
 ### Route
@@ -59,7 +59,7 @@ Generates a controller and view, and configures a route in `app/scripts/app.js` 
 
 Example:
 ```bash
-yo angular-require:route myroute
+yo angular-lazyload:route myroute
 ```
 
 Produces `app/scripts/controllers/myroute.js`:
@@ -83,7 +83,7 @@ Generates a controller in `app/scripts/controllers`.
 
 Example:
 ```bash
-yo angular-require:controller user
+yo angular-lazyload:controller user
 ```
 
 Produces `app/scripts/controllers/user.js`:
@@ -101,7 +101,7 @@ Generates a directive in `app/scripts/directives`.
 
 Example:
 ```bash
-yo angular-require:directive myDirective
+yo angular-lazyload:directive myDirective
 ```
 
 Produces `app/scripts/directives/myDirective.js`:
@@ -126,7 +126,7 @@ Generates a filter in `app/scripts/filters`.
 
 Example:
 ```bash
-yo angular-require:filter myFilter
+yo angular-lazyload:filter myFilter
 ```
 
 Produces `app/scripts/filters/myFilter.js`:
@@ -147,7 +147,7 @@ Generates an HTML view file in `app/views`.
 
 Example:
 ```bash
-yo angular-require:view user
+yo angular-lazyload:view user
 ```
 
 Produces `app/views/user.html`:
@@ -160,7 +160,7 @@ Generates an AngularJS service.
 
 Example:
 ```bash
-yo angular-require:service myService
+yo angular-lazyload:service myService
 ```
 
 Produces `app/scripts/services/myService.js`:
@@ -181,7 +181,7 @@ Generates an AngularJS service decorator.
 
 Example:
 ```bash
-yo angular-require:decorator serviceName
+yo angular-lazyload:decorator serviceName
 ```
 
 Produces `app/scripts/decorators/serviceNameDecorator.js`:
@@ -289,6 +289,6 @@ When submitting a new feature, add tests that cover the feature.
 
 Much <3 to the Yeoman community for creating such a great tool!
 
-If you like generator-angular-require, please tell your friends and colleagues. If you are writing about or mentioning generator-angular-require, let me know and I will happily link to it from here.
+If you like generator-angular-lazyload, please tell your friends and colleagues. If you are writing about or mentioning generator-angular-require, let me know and I will happily link to it from here.
 
 Thank you!
