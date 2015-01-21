@@ -6,7 +6,7 @@ define(['angular']/*deps*/, function (angular)/*invoke*/ {
   var app = angular.module('<%= scriptAppName %>', [/*angJSDeps*/<%= angularModules %>])<% if (ngRoute) { %>
     .config(function ($routeProvider, $controllerProvider, $provide, $locationProvide) {
       
-      $locationProvider.html5Mode(true).hashPrefix('!');
+      //$locationProvider.html5Mode(true).hashPrefix('!');
       
       $routeProvider
         .when('/', {
