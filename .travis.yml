@@ -3,5 +3,5 @@ node_js:
   - '0.10'
 before_install:
   - currentfolder=${PWD##*/}
-  - if [ "$currentfolder" != 'generator-angular-require' ]; then cd .. && eval "mv $currentfolder generator-angular-require" && cd generator-angular-require; fi
+  - if [ "$currentfolder" != 'generator-angular-lazyload' ]; then cd .. && eval "mv $currentfolder generator-angular-lazyload" && cd generator-angular-lazyload; fi
 
