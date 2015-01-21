@@ -17,9 +17,9 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aaronallport/generator-angular-lazyload.git"
+    "url": "https://github.com/truongld/generator-angular-lazyload.git"
   },
-  "bugs": "http://github.com/aaronallport/generator-angular-lazyload/issues",
+  "bugs": "http://github.com/truongld/generator-angular-lazyload/issues",
   "scripts": {
     "test": "mocha"
   },
