@@ -4,8 +4,10 @@ define(['angular']/*deps*/, function (angular)/*invoke*/ {
   'use strict';
 
   var app = angular.module('<%= scriptAppName %>', [/*angJSDeps*/<%= angularModules %>])<% if (ngRoute) { %>
-    .config(['$routeProvider', '$controllerProvider', '$provide',function ($routeProvider, $controllerProvider, $provide) {
-
+    .config(function ($routeProvider, $controllerProvider, $provide) {
+      
+      $locationProvider.html5Mode(true).hashPrefix('!');
+      
       $routeProvider
         .when('/', {
           templateUrl: 'views/main.html',
@@ -14,6 +16,6 @@ define(['angular']/*deps*/, function (angular)/*invoke*/ {
         .otherwise({
           redirectTo: '/'
         });
-    }])<% } %>;
+    })<% } %>;
 	return app;
 });
