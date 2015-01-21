@@ -60,7 +60,7 @@ describe('Angular-Lazyload generator template mechanism', function () {
             // Test JS Files
             var regex_js_app = new RegExp('module\\(\'' + expectedAppName + '\'');
             assert.ok(regex_js_app.test(app_js), 'app.js template using a wrong appName');
-            var regex_js_controller = new RegExp('module\\(\'' + expectedAppName + '.controllers.MainCtrl\'');
+            var regex_js_controller = new RegExp('module\\(\'' + expectedAppName + '\'');
             assert.ok(regex_js_controller.test(main_js), 'main.js template using a wrong appName');
             assert.ok(regex_js_controller.test(main_test_js), 'controller spec template using a wrong appName');
 
