@@ -4,7 +4,7 @@ define(['angular']/*deps*/, function (angular)/*invoke*/ {
   'use strict';
 
   var app = angular.module('<%= scriptAppName %>', [/*angJSDeps*/<%= angularModules %>])<% if (ngRoute) { %>
-    .config(
+  .config(
     [
 	'$routeProvider',
 	'$locationProvider',
@@ -31,6 +31,6 @@ define(['angular']/*deps*/, function (angular)/*invoke*/ {
 		  redirectTo: '/'
 		});
     	}
-    ])<% } %>;
-	return app;
+  ])<% } %>;
+  return app;
 });
