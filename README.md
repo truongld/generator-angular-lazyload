@@ -1,6 +1,6 @@
 # AngularJS-Lazyload generator
 
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](https://travis-ci.org/truongld/generator-angular-lazyload.png?branch=master)](https://travis-ci.org/aaronallport/generator-angular-lazyload)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](https://travis-ci.org/truongld/generator-angular-lazyload.png?branch=master)](https://travis-ci.org/truongld/generator-angular-lazyload)
 
 > Yeoman generator for AngularJS using RequireJS for Lazyload - lets you quickly set up a project with sensible defaults and best practises.
 
