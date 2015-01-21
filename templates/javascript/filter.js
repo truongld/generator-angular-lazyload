@@ -1,8 +1,7 @@
-define(['angular'], function (angular) {
+define(['app'], function (app) {
   'use strict';
 
-  angular.module('<%= scriptAppName %>.filters.<%= classedName %>', [])
-  	.filter('<%= cameledName %>', function () {
+  app.filter('<%= cameledName %>', function () {
       return function (input) {
       	return '<%= cameledName %> filter: ' + input;
       };
