@@ -32,15 +32,15 @@ var Generator = module.exports = function Generator(args, options) {
 
   this.appPath = this.env.options.appPath;
 
-  this.hookFor('angular-require:common', {
+  this.hookFor('angular-lazyload:common', {
     args: args
   });
 
-  this.hookFor('angular-require:main', {
+  this.hookFor('angular-lazyload:main', {
     args: args
   });
 
-  this.hookFor('angular-require:controller', {
+  this.hookFor('angular-lazyload:controller', {
     args: args
   });
 
