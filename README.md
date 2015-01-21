@@ -64,12 +64,11 @@ yo angular-lazyload:route myroute
 
 Produces `app/scripts/controllers/myroute.js`:
 ```javascript
-define(['angular'], function (angular) {
+define(['app'], function (app) {
   'use strict';
-  angular.module('myApp.controllers.myrouteCtrl', [])
-    .controller('myrouteCtrl', function ($scope) {
-      // ...
-    });
+  app.controller('myrouteCtrl', function ($scope) {
+    // ...
+  });
 });
 ```
 
@@ -88,12 +87,11 @@ yo angular-lazyload:controller user
 
 Produces `app/scripts/controllers/user.js`:
 ```javascript
-define(['angular'], function (angular) {
+define(['app'], function (app) {
   'use strict';
-  angular.module('myApp.controllers.userCtrl', [])
-    .controller('userCtrl', function ($scope) {
-      // ...
-    });
+  app.controller('userCtrl', function ($scope) {
+    // ...
+  });
 });
 ```
 ### Directive
@@ -106,19 +104,18 @@ yo angular-lazyload:directive myDirective
 
 Produces `app/scripts/directives/myDirective.js`:
 ```javascript
-define(['angular'], function (angular) {
+define(['app'], function (app) {
   'use strict';
-  angular.module('myApp.directives.myDirective', [])
-    .directive('myDirective', function () {
-      return {
-        template: '<div></div>',
-        restrict: 'E',
-        link: function postLink(scope, element, attrs) {
-          element.text('this is the myDirective directive');
-        }
-      };
-    });
+  app.directive('myDirective', function () {
+    return {
+      template: '<div></div>',
+      restrict: 'E',
+      link: function postLink(scope, element, attrs) {
+        element.text('this is the myDirective directive');
+      }
+    };
   });
+});
 ```
 
 ### Filter
@@ -131,14 +128,13 @@ yo angular-lazyload:filter myFilter
 
 Produces `app/scripts/filters/myFilter.js`:
 ```javascript
-define(['angular'], function (angular) {
+define(['app'], function (app) {
   'use strict';
-  angular.module('myApp.filters.myFilter', [])
-    .filter('myFilter', function () {
-      return function (input) {
-        return 'myFilter filter:' + input;
-      };
-    });
+  app.filter('myFilter', function () {
+    return function (input) {
+      return 'myFilter filter:' + input;
+    };
+  });
 });
 ```
 
@@ -165,12 +161,11 @@ yo angular-lazyload:service myService
 
 Produces `app/scripts/services/myService.js`:
 ```javascript
-define(['angular'], function (angular) {
+define(['app'], function (app) {
   'use strict';
-  angular.module('myApp.services.myService', [])
-    .service('myService', function () {
-      // ...
-    });
+  app.service('myService', function () {
+    // ...
+  });
 });
 ```
 
@@ -186,15 +181,14 @@ yo angular-lazyload:decorator serviceName
 
 Produces `app/scripts/decorators/serviceNameDecorator.js`:
 ```javascript
-define(['angular'], function (angular) {
+define(['app'], function (app) {
   'use strict';
-  angular.module('myApp.decorators.serviceName', [])
-    .config(function ($provide) {
-      $provide.decorator('serviceName', function ($delegate) {
-        // ...
-        return $delegate;
-      });
+  app.config(function ($provide) {
+    $provide.decorator('serviceName', function ($delegate) {
+      // ...
+      return $delegate;
     });
+  });
 });
 ```
 
