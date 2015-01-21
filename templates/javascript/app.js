@@ -25,7 +25,7 @@ define(['angular']/*deps*/, function (angular)/*invoke*/ {
 		$routeProvider
 		.when('/', {
 		  templateUrl: 'views/main.html',
-		  resolve: resolveController(['controllers/main'])
+		  resolve: resolveController(['./controllers/main'])
 		})
 		.otherwise({
 		  redirectTo: '/'
