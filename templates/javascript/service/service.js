@@ -1,8 +1,7 @@
-define(['angular'], function (angular) {
+define(['app'], function (app) {
   'use strict';
 
-  angular.module('<%= scriptAppName %>.services.<%= classedName %>', [])
-	.service('<%= classedName %>', function <%= classedName %>() {
+  app.service('<%= classedName %>', function <%= classedName %>() {
 	// AngularJS will instantiate a singleton by calling "new" on this function
 	});
 });

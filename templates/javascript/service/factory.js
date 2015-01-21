@@ -1,8 +1,7 @@
-define(['angular'], function (angular) {
+define(['app'], function (app) {
   'use strict';
 
-  angular.module('<%= scriptAppName %>.services.<%= classedName %>', [])
-    .factory('<%= cameledName %>', function () {
+  app.factory('<%= cameledName %>', function () {
       // Service logic
       // ...
 

@@ -5,7 +5,7 @@ define(['angular', 'angular-mocks', 'app'], function(angular, mocks, app) {
   describe('Directive: <%= cameledName %>', function () {
 
     // load the directive's module
-    beforeEach(module('<%= scriptAppName %>.directives.<%= classedName %>'));
+    beforeEach(module('<%= scriptAppName %>'));
 
     var element,
       scope;

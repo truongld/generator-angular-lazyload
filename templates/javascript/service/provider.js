@@ -1,8 +1,7 @@
-define(['angular'], function (angular) {
+define(['app'], function (app) {
   'use strict';
 
-  angular.module('<%= scriptAppName %>.services.<%= classedName %>', [])
-    .provider('<%= cameledName %>', function () {
+  app.provider('<%= cameledName %>', function () {
 
       // Private variables
       var salutation = 'Hello';

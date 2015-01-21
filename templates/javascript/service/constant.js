@@ -1,6 +1,5 @@
-define(['angular'], function (angular) {
+define(['app'], function (app) {
   'use strict';
 
-  angular.module('<%= scriptAppName %>.services.<%= classedName %>', [])
-	.constant('<%= cameledName %>', 42);
+  app.constant('<%= cameledName %>', 42);
 });

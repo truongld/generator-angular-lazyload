@@ -5,7 +5,7 @@ define(['angular', 'angular-mocks', 'app'], function(angular, mocks, app) {
   describe('Controller: <%= classedName %>Ctrl', function () {
 
     // load the controller's module
-    beforeEach(module('<%= scriptAppName %>.controllers.<%= classedName %>Ctrl'));
+    beforeEach(module('<%= scriptAppName %>'));
 
     var <%= classedName %>Ctrl,
       scope;
