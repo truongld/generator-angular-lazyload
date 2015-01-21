@@ -51,8 +51,9 @@ function resolveController(names) {
     load: ['$q', '$rootScope', function ($q, $rootScope) {
         var defer = $q.defer();
         require(names, function () {
-          defer.resolve();
-          $rootScope.$apply();
+          $rootScope.$apply(function() {
+            defer.resolve();
+          });
         });
       return defer.promise;
     }]
