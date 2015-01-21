@@ -102,7 +102,7 @@ describe('Angular-Lazyload generator', function () {
     var angularGenerator;
     var name = 'foo';
     var deps = [path.join('../..', generatorType)];
-    angularGenerator = helpers.createGenerator('angular-require:' + generatorType, deps, [name]);
+    angularGenerator = helpers.createGenerator('angular-lazyload:' + generatorType, deps, [name]);
 
     helpers.mockPrompt(angular, {
       compass: true,
@@ -169,7 +169,7 @@ describe('Angular-Lazyload generator', function () {
     it('should generate a new view', function (done) {
       var angularView;
       var deps = ['../../view'];
-      angularView = helpers.createGenerator('angular-require:view', deps, ['foo']);
+      angularView = helpers.createGenerator('angular-lazyload:view', deps, ['foo']);
 
       helpers.mockPrompt(angular, {
         compass: true,
@@ -190,7 +190,7 @@ describe('Angular-Lazyload generator', function () {
     it('should generate a new view in subdirectories', function (done) {
       var angularView;
       var deps = ['../../view'];
-      angularView = helpers.createGenerator('angular-require:view', deps, ['foo/bar']);
+      angularView = helpers.createGenerator('angular-lazyload:view', deps, ['foo/bar']);
 
       helpers.mockPrompt(angular, {
         compass: true,
