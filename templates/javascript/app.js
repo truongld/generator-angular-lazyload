@@ -4,7 +4,7 @@ define(['angular']/*deps*/, function (angular)/*invoke*/ {
   'use strict';
 
   var app = angular.module('<%= scriptAppName %>', [/*angJSDeps*/<%= angularModules %>])<% if (ngRoute) { %>
-    .config(function ($routeProvider, $controllerProvider, $provide) {
+    .config(function ($routeProvider, $controllerProvider, $provide, $locationProvide) {
       
       $locationProvider.html5Mode(true).hashPrefix('!');
       
