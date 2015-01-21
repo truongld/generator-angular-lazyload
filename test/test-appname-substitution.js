@@ -8,7 +8,7 @@ var generators = require('yeoman-generator');
 var helpers = require('yeoman-generator').test;
 
 
-describe('Angular-RequireJS generator template mechanism', function () {
+describe('Angular-Lazyload generator template mechanism', function () {
     //TODO: Add underscore dependency and test with _.camelize(folderName);
     var folderName = 'UpperCaseBug';
     var angular;
@@ -27,7 +27,7 @@ describe('Angular-RequireJS generator template mechanism', function () {
             if (err) {
                 done(err);
             }
-            angular = helpers.createGenerator('angular-require:app', deps);
+            angular = helpers.createGenerator('angular-lazyload:app', deps);
             angular.options['skip-install'] = true;
             done();
         });
