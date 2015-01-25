@@ -1,6 +1,6 @@
 {
   "name": "generator-angular-lazyload",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Yeoman generator for AngularJS Lazyload using RequireJS",
   "keywords": [
     "yeoman-generator",
