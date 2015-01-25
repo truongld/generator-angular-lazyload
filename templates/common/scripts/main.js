@@ -3,11 +3,11 @@ require.config({
   paths: {
 	  'angular' : '../bower_components/angular/angular',
 	  'angular-mocks': '../bower_components/angular-mocks/angular-mocks'<% if (routeModule) { %>,
-      'angular-route': '../bower_components/angular-route/angular-route'<% } %><% if (sanitizeModule) { %>,
-      'angular-scenario': '../bower_components/angular-scenario/angular-scenario',
-      'angular-sanitize': '../bower_components/angular-sanitize/angular-sanitize'<% } %><% if (resourceModule) { %>,
-      'angular-resource': '../bower_components/angular-resource/angular-resource'<% } %><% if (cookiesModule) { %>,
-      'angular-cookies': '../bower_components/angular-cookies/angular-cookies'<% } %>
+    'angular-route': '../bower_components/angular-route/angular-route'<% } %><% if (sanitizeModule) { %>,
+    'angular-scenario': '../bower_components/angular-scenario/angular-scenario',
+    'angular-sanitize': '../bower_components/angular-sanitize/angular-sanitize'<% } %><% if (resourceModule) { %>,
+    'angular-resource': '../bower_components/angular-resource/angular-resource'<% } %><% if (cookiesModule) { %>,
+    'angular-cookies': '../bower_components/angular-cookies/angular-cookies'<% } %>
   },
   shim: {
     'angular' : {'exports' : 'angular'}<% if (routeModule) { %>,
@@ -47,6 +47,7 @@ require([
 
 /* resolve controller for lazyload */
 function resolveController(names) {
+  'use strict';
   return {
     load: ['$q', '$rootScope', function ($q, $rootScope) {
         var defer = $q.defer();
@@ -55,7 +56,7 @@ function resolveController(names) {
             defer.resolve();
           });
         });
-      return defer.promise;
-    }]
+        return defer.promise;
+      }]
   };
 }

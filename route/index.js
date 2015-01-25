@@ -20,8 +20,8 @@ Generator.prototype.rewriteAppJs = function () {
       'scripts/app.js'),
     needle: '.otherwise',
     splicable: [
-      "  templateUrl: 'views/" + this.name.toLowerCase() + ".html',",
-      "  resolve: resolveController(['./controllers/" + this.name.toLowerCase() + "'])"
+      "  templateUrl: '/views/" + this.name.toLowerCase() + ".html',",
+      "  resolve: resolveController(['/scripts/controllers/" + this.name.toLowerCase() + ".js'])"
     ]
   };
 
