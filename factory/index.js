@@ -27,5 +27,5 @@ Generator.prototype.injectDependenciesToApp = function () {
   //   'services/' + this.name.toLowerCase(), 
   //   this.classedName + 'Factory', 
   //   this.scriptAppName + '.services.' + this.classedName
-  );
+  // );
 };
