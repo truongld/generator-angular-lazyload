@@ -22,10 +22,10 @@ Generator.prototype.createFilterFiles = function createFilterFiles() {
 
 // Re-write the main app module to account for our new dependency
 Generator.prototype.injectDependenciesToApp = function () {
-  angularUtils.injectIntoFile(
-    this.env.options.appPath, 
-    'filters/' + this.name.toLowerCase(), 
-    this.classedName + 'Filter', 
-    this.scriptAppName + '.filters.' + this.classedName
-  );
+  // angularUtils.injectIntoFile(
+  //   this.env.options.appPath, 
+  //   'filters/' + this.name.toLowerCase(), 
+  //   this.classedName + 'Filter', 
+  //   this.scriptAppName + '.filters.' + this.classedName
+  // );
 };
