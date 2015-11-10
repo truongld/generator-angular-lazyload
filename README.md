@@ -4,6 +4,8 @@
 
 > Yeoman generator for AngularJS using RequireJS for Lazyload - lets you quickly set up a project with sensible defaults and best practises.
 
+> A quick tutorial: https://www.youtube.com/watch?v=iUTHuFCFOp8
+
 
 ## Usage
 
