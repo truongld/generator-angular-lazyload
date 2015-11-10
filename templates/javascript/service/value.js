@@ -1,5 +1,5 @@
 define(['app'], function (app) {
-  'use strict';
+	'use strict';
 
-  app.value('<%= cameledName %>', 42);
+	app.value('<%= cameledName %>', 42);
 });
